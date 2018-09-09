@@ -12,7 +12,7 @@ app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
 mysql.init_app(app)
 
-@app.route('/')
+@app.route('/houses')
 def get():
     cur = mysql.connect().cursor()
     cur.execute('''select * from citi.house''')
